@@ -1,0 +1,90 @@
+:root{
+    --clr-dark-gray: hsl(0, 0%, 13%);
+    --clr-white: hsl(200, 16%, 89%);
+    /* light mode */
+    --bg-clr-light: var(--clr-white);
+    --txt-clr-light: var(--clr-dark-gray);
+    /* dark mode */
+    --bg-clr-dark: var(--clr-dark-gray);
+    --txt-clr-dark: var(--clr-white);
+}
+
+body {
+    --bg-clr: var(--bg-clr-light);
+    --txt-clr: var(--txt-clr-light);
+    color-scheme: light;
+}
+body.dark{
+    --bg-clr: var(--bg-clr-dark);
+    --txt-clr: var(--txt-clr-dark);
+    color-scheme: dark;
+}
+
+.App {
+    background-color: var(--bg-clr);
+}
+h1 {
+    color: var(--txt-clr);
+}
+.Button {
+    color: var(--txt-clr);
+    border: 2px solid var(--txt-clr);
+}
+/* ##################################################################### */
+
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.App {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+[type="button"] {
+    user-select: none;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    appearance: button;
+    font: inherit;
+}
+.Button {
+    min-height: 3.25rem;
+    max-height: 3em;
+    width: min-content;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: capitalize;
+    white-space: nowrap;
+    padding: max(0.4em, 0.4rem) max(2.2em, 2.2rem);
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: transform 400ms cubic-bezier(0.66, -0.2, 0.27, 1.15);
+}
+::-moz-focus-inner {
+    border: none;
+}
+:focus {
+    outline: 2px solid var(--txt-clr);
+    transform: scale(1.1);
+}
+.Button:hover {
+    transform: scale(1.1);
+}
